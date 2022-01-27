@@ -1,0 +1,15 @@
+.row {
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.letterbox {
+  height: 40px;
+  width: 40px;
+  border-style: solid;
+  background-color: lightgray;
+  text-align: center;
+  line-height: 40px;
+}
