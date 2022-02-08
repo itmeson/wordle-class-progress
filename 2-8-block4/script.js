@@ -13,7 +13,7 @@ for (let j = 0; j < 6; j++) {
   row.setAttribute("id", rowname);
   row.setAttribute("class", "row");
   document.getElementById("guessgrid").appendChild(row);
-
+  
   for (let i = 0; i < 5;  i++) {
     let input = document.createElement("div");
     input.setAttribute("type", "text");
@@ -24,6 +24,7 @@ for (let j = 0; j < 6; j++) {
     document.getElementById(rowname).appendChild(input);
   }
 }
+
 document.addEventListener('keydown', keyDown);
 
 function keyDown(e) {
@@ -41,14 +42,14 @@ function keyDown(e) {
     checkWord();
   }
 }
-
+    
 function checkWord() {
   let guess = "";
   for (let i = 0; i < 5; i++) {
     guess = guess + document.getElementById(`${guessIndex}${i}`).innerHTML;
   }
   if (! (words.includes(guess) || (weird.includes(guess)))) {
-    alert("that's not a word")
+    alert("that's not a real word");
   }
   else {
     giveFeedback(guess);
@@ -59,16 +60,16 @@ function checkWord() {
 
 function giveFeedback(guess) {
   for (let i = 0; i < 5; i++) {
-    if (!todaysWord.includes(guess.charAt(i))) { // if the letter isn't there at all
+    if (!todaysWord.includes(guess.charAt(i))) { // if letter isn't there at all
       document.getElementById(`${guessIndex}${i}`).style.backgroundColor = "darkgray";
     }
-    else if (todaysWord.charAt(i) === guess.charAt(i)) {// it's the right letter, turn it green)
+    else if (todaysWord.charAt(i) === guess.charAt(i))  { // if correct letter in correct place, turn it green
       document.getElementById(`${guessIndex}${i}`).style.backgroundColor = "green";
+      
     }
-    else if (todaysWord.includes(guess.charAt(i))){
+    else if (todaysWord.includes(guess.charAt(i))) { // if it's in the wrong spot
       document.getElementById(`${guessIndex}${i}`).style.backgroundColor = "yellow";
     }
   }
-
   
 }
