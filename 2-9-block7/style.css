@@ -1,0 +1,45 @@
+.row {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.letterbox {
+  min-width: 20px;
+  height: 40px;
+  width: 40px;
+  border-style: solid;
+  background-color: white;
+  text-align: center;
+  line-height: 40px;
+  float: left;
+}
+
+.outrow {
+  width: 90%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.alphabox {
+  float: left;
+  background-color: rgb(230, 230, 230);
+  color:black;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  border-style: solid;
+  border-color: grey;
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+}
